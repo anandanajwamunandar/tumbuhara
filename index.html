@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Materi Konseling Kesehatan Balita</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Nunito', sans-serif; background-color: #f8fafc; }
+        .modal-enter { animation: fadeIn 0.25s ease-out forwards; }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: scale(0.96); }
+            to { opacity: 1; transform: scale(1); }
+        }
+    </style>
+</head>
+<body class="text-gray-800 antialiased">
+
+    <!-- Header / Banner -->
+    <header class="bg-sky-700 text-white py-10 px-4 text-center shadow-lg">
+        <h1 class="text-3xl md:text-4xl font-extrabold mb-2"><i class="fas fa-heartbeat"></i> MATERI KONSELING AWAL</h1>
+        <p class="text-sky-100 text-base md:text-lg max-w-2xl mx-auto">Panduan Lengkap MPASI, PHBS, Penyakit/Infeksi, dan Posyandu</p>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-4 py-8">
+
+        <!-- Tombol Menu Canva -->
+        <div class="mb-10 text-center">
+            <button onclick="openModal('modalCanva')" class="bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-600 hover:to-orange-600 text-white font-extrabold text-lg px-8 py-4 rounded-2xl shadow-xl transform hover:-translate-y-1 transition flex items-center justify-center mx-auto space-x-3">
+                <i class="fas fa-utensils text-2xl"></i>
+                <span>Lihat Buku Menu Makanan (Canva)</span>
+            </button>
+        </div>
+
+        <!-- Judul Pilihan Bab -->
+        <div class="text-center mb-6">
+            <h2 class="text-2xl font-bold text-sky-900">Buku Menu Materi Konseling</h2>
+            <p class="text-gray-600 text-sm">Klik salah satu bab di bawah untuk membaca materi lengkap</p>
+        </div>
+
+        <!-- Grid Menu Bab Materi -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+
+            <!-- Card 1 -->
+            <div onclick="openModal('modalBab1')" class="bg-white p-6 rounded-2xl shadow-md border-t-8 border-sky-500 cursor-pointer hover:shadow-xl hover:-translate-y-1 transition duration-200 flex flex-col justify-between">
+                <div>
+                    <div class="w-12 h-12 bg-sky-100 text-sky-600 rounded-xl flex items-center justify-center text-xl font-bold mb-4">
+                        <i class="fas fa-bowl-food"></i>
+                    </div>
+                    <h3 class="font-bold text-lg text-gray-800 mb-2">MPASI (kebutuhan anak sesuai)</h3>
+                    <p class="text-gray-500 text-xs">Pemberian MPASI, kebutuhan usia, kelompok makanan, yang dihindari, mitos & fakta, solusi susah makan.</p>
+                </div>
+                <div class="mt-6 text-sky-600 font-bold text-xs flex items-center">
+                    <span>Buka Materi</span>
+                    <i class="fas fa-arrow-right ml-2"></i>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div onclick="openModal('modalBab2')" class="bg-white p-6 rounded-2xl shadow-md border-t-8 border-emerald-500 cursor-pointer hover:shadow-xl hover:-translate-y-1 transition duration-200 flex flex-col justify-between">
+                <div>
+                    <div class="w-12 h-12 bg-emerald-100 text-emerald-600 rounded-xl flex items-center justify-center text-xl font-bold mb-4">
+                        <i class="fas fa-pump-soap"></i>
+                    </div>
+                    <h3 class="font-bold text-lg text-gray-800 mb-2">PHBS (lingkungan dan asap rokok)</h3>
+                    <p class="text-gray-500 text-xs">Cuci tangan, air minum, jamban sehat, sampah, nyamuk, serta rumah bebas asap rokok.</p>
+                </div>
+                <div class="mt-6 text-emerald-600 font-bold text-xs flex items-center">
+                    <span>Buka Materi</span>
+                    <i class="fas fa-arrow-right ml-2"></i>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div onclick="openModal('modalBab3')" class="bg-white p-6 rounded-2xl shadow-md border-t-8 border-rose-500 cursor-pointer hover:shadow-xl hover:-translate-y-1 transition duration-200 flex flex-col justify-between">
+                <div>
+                    <div class="w-12 h-12 bg-rose-100 text-rose-600 rounded-xl flex items-center justify-center text-xl font-bold mb-4">
+                        <i class="fas fa-virus"></i>
+                    </div>
+                    <h3 class="font-bold text-lg text-gray-800 mb-2">Penyakit/Infeksi Menurunkan BB</h3>
+                    <p class="text-gray-500 text-xs">Penyebab BB turun saat sakit, Diare, ISPA, TBC, Campak, Cacingan, Demam, serta penanganannya.</p>
+                </div>
+                <div class="mt-6 text-rose-600 font-bold text-xs flex items-center">
+                    <span>Buka Materi</span>
+                    <i class="fas fa-arrow-right ml-2"></i>
+                </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div onclick="openModal('modalBab4')" class="bg-white p-6 rounded-2xl shadow-md border-t-8 border-indigo-500 cursor-pointer hover:shadow-xl hover:-translate-y-1 transition duration-200 flex flex-col justify-between">
+                <div>
+                    <div class="w-12 h-12 bg-indigo-100 text-indigo-600 rounded-xl flex items-center justify-center text-xl font-bold mb-4">
+                        <i class="fas fa-clinic-medical"></i>
+                    </div>
+                    <h3 class="font-bold text-lg text-gray-800 mb-2">Anjuran Kunjungan Rutin Posyandu</h3>
+                    <p class="text-gray-500 text-xs">Pentingnya Posyandu, layanan yang didapat, serta hal yang perlu diperhatikan setelah penimbangan.</p>
+                </div>
+                <div class="mt-6 text-indigo-600 font-bold text-xs flex items-center">
+                    <span>Buka Materi</span>
+                    <i class="fas fa-arrow-right ml-2"></i>
+                </div>
+            </div>
+
+        </div>
+
+    </main>
+
+    <!-- ==================== MODAL BUKU MENU CANVA ==================== -->
+    <div id="modalCanva" class="fixed inset-0 bg-black bg-opacity-70 hidden flex items-center justify-center p-4 z-50 overflow-y-auto">
+        <div class="bg-white rounded-2xl w-full max-w-4xl my-8 overflow-hidden relative shadow-2xl modal-enter max-h-[90vh] flex flex-col">
+            <div class="bg-amber-500 text-white p-4 flex justify-between items-center sticky top-0 z-10">
+                <h3 class="text-xl font-bold"><i class="fas fa-utensils mr-2"></i> Buku Menu Makanan (Canva)</h3>
+                <button onclick="closeModal('modalCanva')" class="text-white hover:text-gray-200 text-2xl font-bold">&times;</button>
+            </div>
+            <div class="p-6 overflow-y-auto">
+                <!-- Kode Embed Canva -->
+                <div style="position: relative; width: 100%; height: 0; padding-top: 141.4286%; padding-bottom: 0; box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); margin-top: 0.5em; margin-bottom: 0.9em; overflow: hidden; border-radius: 8px; will-change: transform;">
+                  <iframe loading="lazy" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0;margin: 0;"
+                    src="https://www.canva.com/design/DAHXO1mqvqE/SFsqz60AthIRYnWHNIT8Rg/view?embed" allowfullscreen="allowfullscreen" allow="fullscreen">
+                  </iframe>
+                </div>
+                <div class="text-center mt-2">
+                    <a href="https://www.canva.com/design/DAHXO1mqvqE/SFsqz60AthIRYnWHNIT8Rg/view?utm_content=DAHXO1mqvqE&amp;utm_campaign=designshare&amp;utm_medium=embeds&amp;utm_source=link" target="_blank" rel="noopener" class="text-amber-600 hover:underline font-semibold text-sm">
+                        Buku Resep PKG MASYARAKAT
+                    </a> oleh Nailah Salsabila
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==================== MODAL BAB 1 ==================== -->
+    <div id="modalBab1" class="fixed inset-0 bg-black bg-opacity-70 hidden flex items-center justify-center p-4 z-50 overflow-y-auto">
+        <div class="bg-white rounded-2xl w-full max-w-4xl my-8 overflow-hidden relative shadow-2xl modal-enter max-h-[90vh] flex flex-col">
+            <div class="bg-sky-600 text-white p-5 flex justify-between items-center sticky top-0 z-10">
+                <h3 class="text-xl font-bold"><i class="fas fa-bowl-food mr-2"></i> MPASI (kebutuhan anak sesuai)</h3>
+                <button onclick="closeModal('modalBab1')" class="text-white hover:text-gray-200 text-2xl font-bold">&times;</button>
+            </div>
+            <div class="p-6 overflow-y-auto space-y-6 text-sm md:text-base leading-relaxed text-gray-800">
+                
+                <div>
+                    <h4 class="text-lg font-bold text-sky-800 mb-2">Kapan anak diberi MPASI?</h4>
+                    <p>MPASI adalah singkatan dari Makanan Pendamping ASI. Artinya makanan atau minuman selain ASI yang diberikan kepada bayi mulai usia 6 bulan. Memasuki usia 6 bulan, tubuh anak tumbuh lebih besar dan membutuhkan lebih banyak energi, zat besi, serta zinc yang tidak lagi dapat dipenuhi oleh ASI saja. Pemberian MPASI yang terlalu cepat sebelum usia 6 bulan berisiko menyebabkan anak lebih mudah terkena diare, alergi, serta menurunkan asupan ASI karena anak kenyang oleh makanan lain. Sebaliknya, jika pemberian MPASI terlambat atau jauh setelah usia 6 bulan, anak berisiko mengalami kekurangan gizi, kenaikan berat badan terhambat, dan menjadi lebih mudah sakit.</p>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-bold text-sky-800 mb-3">Kebutuhan makan anak berdasarkan usia</h4>
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-left border-collapse border border-gray-200 text-xs md:text-sm">
+                            <thead>
+                                <tr class="bg-sky-100 text-sky-900">
+                                    <th class="border border-gray-200 p-2 font-bold">Usia</th>
+                                    <th class="border border-gray-200 p-2 font-bold">Bentuk makanan</th>
+                                    <th class="border border-gray-200 p-2 font-bold">Berapa kali sehari</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="border border-gray-200 p-2 font-semibold">6 - 8 bulan</td>
+                                    <td class="border border-gray-200 p-2">Makanan halus dan lumat (bubur saring, bubur halus, pure)</td>
+                                    <td class="border border-gray-200 p-2">2 - 3 kali makan utama dan 1 - 2 kali selingan.</td>
+                                </tr>
+                                <tr class="bg-gray-50">
+                                    <td class="border border-gray-200 p-2 font-semibold">9 - 11 bulan</td>
+                                    <td class="border border-gray-200 p-2">Makanan dicincang halus atau kasar sesuai kemampuan</td>
+                                    <td class="border border-gray-200 p-2">3 - 4 kali makan utama dan 1 - 2 kali camilan padat energi dengan ASI tetap diberikan.</td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-gray-200 p-2 font-semibold">12 - 23 bulan</td>
+                                    <td class="border border-gray-200 p-2">Makanan keluarga, dipotong kecil atau dicincang</td>
+                                    <td class="border border-gray-200 p-2">3 - 4 kali makan utama dan 1 - 2 kali camilan padat gizi.</td>
+                                </tr>
+                                <tr class="bg-gray-50">
+                                    <td class="border border-gray-200 p-2 font-semibold">2 - 5 tahun</td>
+                                    <td class="border border-gray-200 p-2">Makanan keluarga (tidak terlalu pedas, asin, dan manis)</td>
+                                    <td class="border border-gray-200 p-2">3 kali makan utama dan 2 kali camilan sehat.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-bold text-sky-800 mb-3">Pemilihan makanan untuk anak</h4>
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-left border-collapse border border-gray-200 text-xs md:text-sm">
+                            <thead>
+                                <tr class="bg-sky-100 text-sky-900">
+                                    <th class="border border-gray-200 p-2 font-bold">Kelompok</th>
+                                    <th class="border border-gray-200 p-2 font-bold">Contoh</th>
+                                    <th class="border border-gray-200 p-2 font-bold">Manfaat untuk anak</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="border border-gray-200 p-2 font-semibold">Makanan pokok (sumber tenaga)</td>
+                                    <td class="border border-gray-200 p-2">Nasi, kentang, ubi, singkong, jagung, roti, mi, bihun</td>
+                                    <td class="border border-gray-200 p-2">Tenaga untuk bergerak dan belajar</td>
+                                </tr>
+                                <tr class="bg-gray-50">
+                                    <td class="border border-gray-200 p-2 font-semibold">Lauk hewani (wajib tiap hari)</td>
+                                    <td class="border border-gray-200 p-2">Telur, ikan (lele, kembung, tongkol, teri), ayam, daging sapi, hati ayam atau hati sapi, udang</td>
+                                    <td class="border border-gray-200 p-2">Pembangun tubuh dan otak; kaya zat besi dan seng; mencegah anak pendek (stunting) dan kurang gizi</td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-gray-200 p-2 font-semibold">Lauk nabati</td>
+                                    <td class="border border-gray-200 p-2">Tempe, tahu, kacang hijau, kacang merah, kacang tanah (dihaluskan)</td>
+                                    <td class="border border-gray-200 p-2">Tambahan protein dan serat</td>
+                                </tr>
+                                <tr class="bg-gray-50">
+                                    <td class="border border-gray-200 p-2 font-semibold">Sayur dan buah</td>
+                                    <td class="border border-gray-200 p-2">Bayam, wortel, labu, brokoli, kangkung, daun kelor, pepaya, pisang, jeruk, mangga</td>
+                                    <td class="border border-gray-200 p-2">Vitamin, mineral, serat; menjaga daya tahan tubuh</td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-gray-200 p-2 font-semibold">Lemak tambahan</td>
+                                    <td class="border border-gray-200 p-2">Minyak, santan, mentega atau margarin, alpukat</td>
+                                    <td class="border border-gray-200 p-2">Tambahan tenaga; membantu tubuh menyerap vitamin A</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-bold text-sky-800 mb-2">Hal yang tidak boleh diberikan/harus dihindari pada anak</h4>
+                    <ul class="list-disc pl-5 space-y-2">
+                        <li><strong>Madu sebelum anak berusia 1 tahun:</strong> Bisa mengandung kuman yang menyebabkan penyakit berbahaya pada bayi.</li>
+                        <li><strong>Susu kental manis sebagai pengganti susu:</strong> Isinya sebagian besar gula, bukan susu bergizi untuk pertumbuhan anak.</li>
+                        <li><strong>Teh manis, sirup, soda, minuman kemasan manis:</strong> Memenuhi perut tanpa gizi, merusak gigi, dan mengurangi nafsu makan.</li>
+                        <li><strong>Makanan keras, kecil, dan bulat utuh seperti: kacang utuh, anggur utuh, permen keras:</strong> Bisa membuat anak tersedak. potong menjadi bagian kecil atau haluskan.</li>
+                        <li><strong>Kerupuk, mie instan, keripik kemasan:</strong> Mengandung tinggi natrium.</li>
+                        <li><strong>Makanan setengah matang (telur, daging, ikan):</strong> Risiko kuman dan cacing.</li>
+                        <li><strong>Menyuapi paksa atau sambil menonton layer:</strong> Membuat anak tidak belajar mengenali rasa lapar dan kenyang.</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-bold text-sky-800 mb-3">Mitos dan fakta seputar MPASI</h4>
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-left border-collapse border border-gray-200 text-xs md:text-sm">
+                            <thead>
+                                <tr class="bg-sky-100 text-sky-900">
+                                    <th class="border border-gray-200 p-2 font-bold w-1/2">Yang sering dikira</th>
+                                    <th class="border border-gray-200 p-2 font-bold w-1/2">Kenyataannya</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="border border-gray-200 p-2 font-semibold">"Bayi yang rewel dan menangis malam hari tandanya ASI tidak cukup, harus diberi pisang atau bubur."</td>
+                                    <td class="border border-gray-200 p-2">Bayi sehat di bawah 6 bulan cukup dengan ASI. Menyusu lebih sering justru memperbanyak ASI.</td>
+                                </tr>
+                                <tr class="bg-gray-50">
+                                    <td class="border border-gray-200 p-2 font-semibold">"Kuah sayur atau kaldu bergizi tinggi."</td>
+                                    <td class="border border-gray-200 p-2">Kuah dan kaldu sebagian besar air. Berikan isinya (daging, ikan, sayur).</td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-gray-200 p-2 font-semibold">"Anak tidak boleh makan telur atau ikan karena nanti alergi atau cacingan."</td>
+                                    <td class="border border-gray-200 p-2">Telur dan ikan sangat bergizi dan aman bila dimasak matang. Cacingan berasal dari tangan dan lingkungan kotor, bukan dari ikan atau telur.</td>
+                                </tr>
+                                <tr class="bg-gray-50">
+                                    <td class="border border-gray-200 p-2 font-semibold">"Anak gemuk pasti sehat."</td>
+                                    <td class="border border-gray-200 p-2">Yang penting berat badan naik sesuai grafik di Buku KIA, tidak harus gemuk.</td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-gray-200 p-2 font-semibold">"Susu kental manis sama dengan susu."</td>
+                                    <td class="border border-gray-200 p-2">Susu kental manis banyak gula dan bukan pengganti susu atau ASI.</td>
+                                </tr>
+                                <tr class="bg-gray-50">
+                                    <td class="border border-gray-200 p-2 font-semibold">"Anak sakit harus pantang makan."</td>
+                                    <td class="border border-gray-200 p-2">Anak sakit justru butuh makan dan minum lebih banyak untuk melawan penyakit.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-bold text-sky-800 mb-2">Solusi anak susah makan</h4>
+                    <ul class="list-disc pl-5 space-y-2">
+                        <li><strong>Coba makanan baru berulang-ulang:</strong> Anak kadang perlu mencoba 8 - 10 kali sebelum menerima rasa baru. Jangan langsung menyimpulkan "anak tidak suka".</li>
+                        <li><strong>Beri porsi kecil tapi sering:</strong> Piring besar membuat anak malas.</li>
+                        <li><strong>Padatkan gizi tanpa menambah volume:</strong> Tambahkan 1 sendok teh minyak, santan, atau mentega ke dalam bubur atau nasi; tambahkan telur, hati ayam, atau ikan ke dalam bubur.</li>
+                        <li><strong>Buat makanan menarik:</strong> Buat tampilan makanan yang menarik bagi anak.</li>
+                        <li><strong>Kurangi minuman manis, susu berlebihan, dan jajanan:</strong> Jangan diberikan sebelum jam makan kurangi agar anak lapar saat waktu makan.</li>
+                        <li><strong>Pastikan tidak sedang sakit:</strong> Anak yang tiba-tiba menolak makan, apalagi disertai demam, batuk lama, atau BAB cair, perlu diperiksa.</li>
+                        <li><strong>Bawa ke Posyandu atau Puskesmas:</strong>
+                            <ul class="list-circle pl-5 mt-1 space-y-1">
+                                <li>- > Bila berat badan tidak naik. Mungkin ada penyebab yang perlu diobati, misalnya cacingan atau infeksi.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- ==================== MODAL BAB 2 ==================== -->
+    <div id="modalBab2" class="fixed inset-0 bg-black bg-opacity-70 hidden flex items-center justify-center p-4 z-50 overflow-y-auto">
+        <div class="bg-white rounded-2xl w-full max-w-4xl my-8 overflow-hidden relative shadow-2xl modal-enter max-h-[90vh] flex flex-col">
+            <div class="bg-emerald-600 text-white p-5 flex justify-between items-center sticky top-0 z-10">
+                <h3 class="text-xl font-bold"><i class="fas fa-pump-soap mr-2"></i> PHBS (lingkungan dan asap rokok)</h3>
+                <button onclick="closeModal('modalBab2')" class="text-white hover:text-gray-200 text-2xl font-bold">&times;</button>
+            </div>
+            <div class="p-6 overflow-y-auto space-y-6 text-sm md:text-base leading-relaxed text-gray-800">
+                
+                <div>
+                    <h4 class="text-lg font-bold text-emerald-800 mb-2">Mengapa Lingkungan Penting?</h4>
+                    <p>Lingkungan yang bersih dan sehat membantu menjaga kesehatan anak. Ketika anak sering sakit, nafsu makan dapat menurun dan makanan yang masuk dapat berkurang sehingga berat badan lebih sulit bertambah.</p>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-bold text-emerald-800 mb-2">Cuci Tangan Pakai Sabun</h4>
+                    <p class="font-semibold mb-2">Kapan harus cuci tangan??</p>
+                    <div class="overflow-x-auto mb-4">
+                        <table class="w-full text-left border-collapse border border-gray-200 text-xs md:text-sm">
+                            <thead>
+                                <tr class="bg-emerald-100 text-emerald-900">
+                                    <th class="border border-gray-200 p-2 font-bold">Waktu</th>
+                                    <th class="border border-gray-200 p-2 font-bold">Siapa yang harus cuci tangan</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="border border-gray-200 p-2">Sebelum makan dan sebelum menyuapi anak</td>
+                                    <td class="border border-gray-200 p-2 font-semibold">Anak, Ayah, Bunda, pengasuh</td>
+                                </tr>
+                                <tr class="bg-gray-50">
+                                    <td class="border border-gray-200 p-2">Sebelum menyiapkan atau memasak makanan</td>
+                                    <td class="border border-gray-200 p-2 font-semibold">Yang memasak</td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-gray-200 p-2">Sebelum menyusui atau memegang bayi</td>
+                                    <td class="border border-gray-200 p-2 font-semibold">Bunda dan semua yang akan menggendong bayi</td>
+                                </tr>
+                                <tr class="bg-gray-50">
+                                    <td class="border border-gray-200 p-2">Setelah buang air besar (BAB) atau buang air kecil</td>
+                                    <td class="border border-gray-200 p-2 font-semibold">Semua orang</td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-gray-200 p-2">Setelah mengganti popok atau membersihkan BAB anak</td>
+                                    <td class="border border-gray-200 p-2 font-semibold">Yang membersihkan</td>
+                                </tr>
+                                <tr class="bg-gray-50">
+                                    <td class="border border-gray-200 p-2">Setelah bermain di tanah atau di luar rumah, atau memegang hewan</td>
+                                    <td class="border border-gray-200 p-2 font-semibold">Anak dan yang menemani</td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-gray-200 p-2">Setelah batuk, bersin, atau membuang ingus</td>
+                                    <td class="border border-gray-200 p-2 font-semibold">Semua orang</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <p class="font-semibold mb-2">Cara cuci tangan yang benar :</p>
+                    <ol class="list-decimal pl-5 space-y-1">
+                        <li>Basahi kedua tangan dengan air bersih yang mengalir.</li>
+                        <li>Beri sabun secukupnya.</li>
+                        <li>Gosok kedua telapak tangan.</li>
+                        <li>Gosok punggung tangan dan sela-sela jari.</li>
+                        <li>Gosok ujung jari dan kuku (kuku sering menjadi tempat kuman bersembunyi).</li>
+                        <li>Gosok kedua ibu jari dengan cara memutar.</li>
+                        <li>Bilas sampai bersih, lalu keringkan dengan lap bersih atau udara.</li>
+                    </ol>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-bold text-emerald-800 mb-2">Air Minum dan Makanan yang Aman</h4>
+                    <ul class="list-disc pl-5 space-y-2">
+                        <li>Minum air yang sudah dimasak sampai mendidih. Untuk bayi, air untuk menyeduh susu atau minum juga harus matang.</li>
+                        <li>Simpan air minum di wadah bersih dan tertutup, ambil dengan gayung bersih atau keran, jangan memasukkan tangan atau gelas langsung ke dalam wadah.</li>
+                        <li>Cuci dan masak bahan makanan dengan baik. Simpan makanan dalam wadah tertutup.</li>
+                        <li>Bersihkan botol, cangkir, dan peralatan makan anak dengan sabun dan air bersih.</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-bold text-emerald-800 mb-2">Jamban Sehat dan Buang Air Besar</h4>
+                    <ul class="list-disc pl-5 space-y-2">
+                        <li>Gunakan jamban sehat (kakus dengan leher angsa dan tangki septik). Jangan BAB sembarangan di sungai, kebun, atau halaman.</li>
+                        <li>Tinja manusia dan hewan membawa kuman dan telur cacing. Jauhkan anak dari area ini.</li>
+                        <li>BAB anak, termasuk bayi, dibuang ke jamban, bukan ke selokan atau kebun. Tinja bayi sama berbahayanya dengan tinja orang dewasa.</li>
+                        <li>Ajari anak memakai jamban dan cuci tangan sesudahnya.</li>
+                        <li>Jaga jamban tetap bersih. Siram dengan air yang cukup.</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-bold text-emerald-800 mb-2">Sampah, Nyamuk, dan Lingkungan Sekitar</h4>
+                    <ul class="list-disc pl-5 space-y-2">
+                        <li>Buang sampah pada tempatnya dan gunakan tempat sampah tertutup. Sampah terbuka mengundang lalat, tikus, dan kecoa.</li>
+                        <li>Jangan membakar sampah plastik karena asapnya mengandung zat berbahaya yang merusak paru-paru anak.</li>
+                        <li>Cegah demam berdarah dengan 3M Plus: Menguras bak mandi dan tempat penampungan air, Menutup rapat tempat penampungan air, Mendaur ulang atau memanfaatkan barang bekas. Plus: pakai kelambu, tanam tanaman pengusir nyamuk, dan jangan menggantung pakaian bekas pakai terlalu lama.</li>
+                        <li>Bersihkan genangan air di sekitar rumah.</li>
+                        <li>Bila memakai obat nyamuk, pilih yang aman dan jangan di dekat anak. Hindari obat nyamuk bakar di kamar anak karena asapnya mengiritasi pernapasan.</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-bold text-emerald-800 mb-2">Rumah Bebas Asap Rokok</h4>
+                    <ul class="list-disc pl-5 space-y-2">
+                        <li>Jangan merokok di dalam rumah.</li>
+                        <li>Jangan merokok di dekat anak.</li>
+                        <li>Jika ada anggota keluarga yang merokok, lakukan di luar rumah dan jauh dari anak dan harus mandi serta ganti baju sebelum memegang anak.</li>
+                        <li>Jangan menjadikan kamar, ruang keluarga, atau kendaraan sebagai tempat merokok.</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- ==================== MODAL BAB 3 ==================== -->
+    <div id="modalBab3" class="fixed inset-0 bg-black bg-opacity-70 hidden flex items-center justify-center p-4 z-50 overflow-y-auto">
+        <div class="bg-white rounded-2xl w-full max-w-4xl my-8 overflow-hidden relative shadow-2xl modal-enter max-h-[90vh] flex flex-col">
+            <div class="bg-rose-600 text-white p-5 flex justify-between items-center sticky top-0 z-10">
+                <h3 class="text-xl font-bold"><i class="fas fa-virus mr-2"></i> Penyakit/infeksi yg dapat menurunkan berat badan</h3>
+                <button onclick="closeModal('modalBab3')" class="text-white hover:text-gray-200 text-2xl font-bold">&times;</button>
+            </div>
+            <div class="p-6 overflow-y-auto space-y-6 text-sm md:text-base leading-relaxed text-gray-800">
+                
+                <div>
+                    <h4 class="text-lg font-bold text-rose-800 mb-2">Mengapa sakit dapat membuat berat badan anak turun?</h4>
+                    <p class="mb-2">Saat anak sakit, tubuhnya "bekerja ekstra" melawan kuman. Akibatnya:</p>
+                    <ul class="list-disc pl-5 space-y-1">
+                        <li>Nafsu makan turun, anak jadi malas atau menolak makan.</li>
+                        <li>Tubuh kehilangan zat gizi, misalnya lewat BAB cair, muntah, atau demam.</li>
+                        <li>Kebutuhan tenaga justru bertambah, sementara makanan yang masuk berkurang.</li>
+                        <li>Tubuh memakai gizi untuk melawan penyakit, bukan untuk tumbuh.</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-bold text-rose-800 mb-3">Penyakit/Infeksi yang perlu diwaspadai</h4>
+                    
+                    <div class="space-y-4">
+                        <!-- Diare -->
+                        <div class="bg-rose-50 p-4 rounded-xl border border-rose-200">
+                            <h5 class="font-bold text-rose-900 text-base mb-1">Diare</h5>
+                            <p><strong>Tanda :</strong> BAB cair tanpa ampaas (lebih dari 3x dalam sehari)</p>
+                            <p><strong>Bahaya :</strong> tubuh kehilangan banyak cairan (dehidrasi) dan zat gizi. Berat badan bisa turun cepat, terutama pada bayi dan balita</p>
+                            <p><strong>Tanda dehidrasi (kekurangan cairan) :</strong> sangat haus, mata cekung, mulut dan bibir kering, jarang kencing, lemas, rewel atau sangat mengantuk, ubun-ubun cekung pada bayi.</p>
+                            <p class="mt-2 font-semibold">Yang dilakukan di rumah :</p>
+                            <ul class="list-disc pl-5">
+                                <li>Beri oralit setiap kali anak BAB cair, sedikit demi sedikit dengan sendok atau cangkir kecil. Takaran ikuti petunjuk tenaga kesehatan atau kemasan.</li>
+                                <li>Terus berikan ASI dan makanan. Jangan dipuasakan.</li>
+                                <li>Jangan beri obat penghenti diare atau antibiotik tanpa resep dokter.</li>
+                            </ul>
+                            <p class="mt-2"><strong>Pencegahan :</strong> cuci tangan pakai sabun, air minum matang, jamban sehat, ASI eksklusif, dan imunisasi rotavirus.</p>
+                        </div>
+
+                        <!-- ISPA -->
+                        <div class="bg-rose-50 p-4 rounded-xl border border-rose-200">
+                            <h5 class="font-bold text-rose-900 text-base mb-1">Batuk pilek berat (ISPA)</h5>
+                            <p><strong>Tanda ISPA ringan :</strong> batuk, pilek, demam ringan, anak masih mau minum dan bermain.</p>
+                            <p><strong>Tanda pneumonia :</strong> napas cepat atau sesak, dada atau perut tertarik ke dalam saat menarik napas, napas berbunyi, anak tampak lemas, tidak mau minum atau makan, demam tinggi.</p>
+                            <p><strong>Pencegahan :</strong> napas cepat atau sesak, dada atau perut tertarik ke dalam saat menarik napas, napas berbunyi, anak tampak lemas, tidak mau minum atau makan, demam tinggi.</p>
+                        </div>
+
+                        <!-- TBC -->
+                        <div class="bg-rose-50 p-4 rounded-xl border border-rose-200">
+                            <h5 class="font-bold text-rose-900 text-base mb-1">TBC (tuberculosis)</h5>
+                            <p>TBC adalah penyakit paru-paru yang menular lewat percikan batuk. Anak bisa tertular dari orang dewasa di rumah yang batuk lama.</p>
+                            <p class="font-semibold mt-1">Tanda TBC :</p>
+                            <ul class="list-disc pl-5">
+                                <li>Berat badan turun, tidak naik, atau naik tetapi tidak sesuai meski sudah diberi makan bergizi</li>
+                                <li>Batuk lebih dari 2 minggu</li>
+                                <li>Demam yang hilang timbul lebih dari 2 minggu</li>
+                                <li>Lesu, tidak aktif seperti biasa, nafsu makan menurun</li>
+                                <li>Ada anggota keluarga atau tetangga dekat yang batuk lama atau sedang berobat TBC</li>
+                            </ul>
+                            <p class="mt-2"><strong>Pencegahan :</strong> imunisasi BCG saat bayi, rumah berventilasi, membuka jendela, dan menutup mulut saat batuk.</p>
+                            <p><strong>Pengobatan :</strong> TBC harus tuntas (biasanya 6 bulan). Jangan berhenti walau anak sudah tampak sehat</p>
+                        </div>
+
+                        <!-- Campak -->
+                        <div class="bg-rose-50 p-4 rounded-xl border border-rose-200">
+                            <h5 class="font-bold text-rose-900 text-base mb-1">Campak</h5>
+                            <p><strong>Tanda :</strong> demam tinggi, ruam merah di seluruh tubuh, mata merah dan berair, batuk, pilek.</p>
+                            <p><strong>Pencegahan :</strong> imunisasi campak-rubella (MR) sesuai jadwal.</p>
+                        </div>
+
+                        <!-- Cacingan -->
+                        <div class="bg-rose-50 p-4 rounded-xl border border-rose-200">
+                            <h5 class="font-bold text-rose-900 text-base mb-1">Cacingan</h5>
+                            <p><strong>Tanda :</strong> perut buncit, anak pucat dan lemas, nafsu makan buruk, berat badan tidak naik, gatal di sekitar anus terutama malam hari, kadang terlihat cacing di tinja.</p>
+                            <p><strong>Pencegahan :</strong> cuci tangan, potong kuku, pakai alas kaki, jamban sehat, masak makanan sampai matang. Beri obat cacing sesuai jadwal dari Puskesmas atau Posyandu (biasanya mulai usia 1 tahun, 2 kali setahun).</p>
+                        </div>
+
+                        <!-- Demam -->
+                        <div class="bg-rose-50 p-4 rounded-xl border border-rose-200">
+                            <h5 class="font-bold text-rose-900 text-base mb-1">Demam</h5>
+                            <p>Demam adalah tanda tubuh sedang melawan penyakit, bukan penyakit itu sendiri. Cari tahu penyebabnya.</p>
+                            <p>Bayi di bawah 3 bulan yang demam harus segera diperiksa.</p>
+                            <p>Bawa ke fasilitas kesehatan bila demam lebih dari 2 - 3 hari, demam sangat tinggi, atau disertai kejang, bintik merah, atau sangat lemas.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-bold text-rose-800 mb-2">Apa yang dapat dilakukan saat anak sakit</h4>
+                    <ul class="list-disc pl-5 space-y-1">
+                        <li>Tetap tawarkan makanan dan minuman sesuai kemampuan anak</li>
+                        <li>Jika sulit makan banyak, berikan dalam porsi kecil tetapi lebih sering.</li>
+                        <li>Pilih makanan sesuai kondisi dan kemampuan makan anak.</li>
+                        <li>Setelah membaik, bantu anak kembali ke pola makan seperti biasa secara bertahap.</li>
+                        <li>Pantau berat badan dan perubahan nafsu makan.</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- ==================== MODAL BAB 4 ==================== -->
+    <div id="modalBab4" class="fixed inset-0 bg-black bg-opacity-70 hidden flex items-center justify-center p-4 z-50 overflow-y-auto">
+        <div class="bg-white rounded-2xl w-full max-w-4xl my-8 overflow-hidden relative shadow-2xl modal-enter max-h-[90vh] flex flex-col">
+            <div class="bg-indigo-600 text-white p-5 flex justify-between items-center sticky top-0 z-10">
+                <h3 class="text-xl font-bold"><i class="fas fa-clinic-medical mr-2"></i> Anjuran kunjungan rutin ke posyandu</h3>
+                <button onclick="closeModal('modalBab4')" class="text-white hover:text-gray-200 text-2xl font-bold">&times;</button>
+            </div>
+            <div class="p-6 overflow-y-auto space-y-6 text-sm md:text-base leading-relaxed text-gray-800">
+                
+                <div>
+                    <h4 class="text-lg font-bold text-indigo-800 mb-2">Mengapa Posyandu Penting</h4>
+                    <p>Pemantauan tumbuh kembang anak berkala (penimbangan dan pengukuran tinggi badan) membantu mendeteksi risiko gangguan pertumbuhan secara cepar.</p>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-bold text-indigo-800 mb-2">Layanan Apa yang Didapat di Posyandu</h4>
+                    <ul class="list-disc pl-5 space-y-2">
+                        <li>Memantau pertumbuhan dan perkembangan balita</li>
+                        <li>Imunasi rutin balita</li>
+                        <li>Mendapatkan informasi tentang makanan, pola asuh, dan Kesehatan anak</li>
+                        <li>Konsultasi tumbuh kembang anak dengan tenaga kesehatan.</li>
+                        <li>Mendapatkan arahan untuk pemeriksaan atau penanganan lebih lanjut diperlukan</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-bold text-indigo-800 mb-2">Setelah Penimbangan, Apa yang Perlu diperhatikan</h4>
+                    <ul class="list-disc pl-5 space-y-2">
+                        <li>Perhatikan perubahan berat badan dari waktu ke waktu, bukan hanya satu kali hasil penimbangan.</li>
+                        <li>Jika berat badan tidak bertambah atau menurun, sampaikan kepada kader atau tenaga kesehatan.</li>
+                        <li>Simpan dan bawa KMS/Buku KIA saat datang ke Posyandu.</li>
+                        <li>Ikuti saran kader atau tenaga kesehatan jika anak membutuhkan pemantauan lebih lanjut</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-gray-300 text-center py-6 mt-12 text-sm">
+        <p>© 2026 Website Konseling Kesehatan Balita. Seluruh materi bersumber dari dokumen Konseling Awal.</p>
+    </footer>
+
+    <!-- JavaScript Modal Handler -->
+    <script>
+        function openModal(id) {
+            document.getElementById(id).classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal(id) {
+            document.getElementById(id).classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        }
+
+        window.onclick = function(event) {
+            const modals = document.querySelectorAll('.fixed.inset-0');
+            modals.forEach(modal => {
+                if (event.target === modal) {
+                    modal.classList.add('hidden');
+                    document.body.style.overflow = 'auto';
+                }
+            });
+        }
+    </script>
+</body>
+</html>
